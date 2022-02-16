@@ -19,22 +19,22 @@ Este projeto é um Sistema MVC de Login desenvolvido em Python, com dois níveis
 
 ### Após Logar:
 1 Alterar minhas informações<br>
-  1.1 Alterar Nome<br>
-  1.2 Alterar Email<br>
-  1.3 Alterar Senha<br>
-  1.4 Alterar status da conta<br>
-  1.5 Deletar Conta<br>
-  1.6 Alterar nível de acesso (admin)<br>
-  1.0 Voltar
+ &nbsp;1.1 Alterar Nome<br>
+ &nbsp;1.2 Alterar Email<br>
+ &nbsp;1.3 Alterar Senha<br>
+ &nbsp;1.4 Alterar status da conta<br>
+ &nbsp;1.5 Deletar Conta<br>
+ &nbsp;1.6 Alterar nível de acesso (admin)<br>
+ &nbsp;1.0 Voltar
 
 2 Alterar conta de um usuário (admin)<br>
-  2.1 Alterar Nome<br>
-  2.2 Alterar Email<br>
-  2.3 Resetar Senha<br>
-  2.4 Alterar status da conta<br>
-  2.5 Deletar Conta<br>
-  2.6 Alterar nível de acesso<br>
-  2.0 Voltar
+ &nbsp;2.1 Alterar Nome<br>
+ &nbsp;2.2 Alterar Email<br>
+ &nbsp;2.3 Resetar Senha<br>
+ &nbsp;2.4 Alterar status da conta<br>
+ &nbsp;2.5 Deletar Conta<br>
+ &nbsp;2.6 Alterar nível de acesso<br>
+ &nbsp;2.0 Voltar
 
 3 Efetuar Logout
 
