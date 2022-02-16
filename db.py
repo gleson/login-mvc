@@ -5,7 +5,7 @@ from models import User, Base
 
 
 def conn():
-    USER = "gleson"
+    USER = "root"
     PASS = "12345"
     HOST = "localhost"
     DB = "login"
