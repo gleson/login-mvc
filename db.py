@@ -3,14 +3,8 @@ from sqlalchemy.orm import sessionmaker
 from models import User, Base
 
 
-
 def conn():
-    USER = "root"
-    PASS = "12345"
-    HOST = "localhost"
-    DB = "login"
-    PORT = "3306"
-    CONN = f"mysql+pymysql://{USER}:{PASS}@{HOST}:{PORT}/{DB}"
+    CONN = 'sqlite:///projeto_login.db'
     return CONN
 
 
@@ -42,6 +36,24 @@ class DbUser:
         return session.query(User).all()
 
     @classmethod
+    def read_one(cls, id=None, name=None, email=None, level=None):
+        session = return_session()
+        try:
+            if id:
+                return session.query(User).filter_by(id=id).one()
+            elif name:
+                return session.query(User).filter_by(name=name).one()
+            elif email:
+                return session.query(User).filter_by(email=email).one()
+            elif level:
+                return session.query(User).filter_by(level=level)[0]
+            else:
+                return False
+        except:
+            return False
+
+
+    @classmethod
     def update(cls, id, field, value):
         session = return_session()
         x = session.query(User).filter(User.id==id).one()
@@ -52,8 +64,11 @@ class DbUser:
         elif field=='status': x.status = value
 
         if any([x.name, x.email, x.password, x.level, x.status]):
-            session.commit()
-            return True
+            try:
+                session.commit()
+                return True
+            except:
+                return False
         return False
 
     @classmethod
@@ -64,7 +79,5 @@ class DbUser:
         return x
 
 
-
-
-
 Base.metadata.create_all(return_engine())
+
